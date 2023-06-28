@@ -4,9 +4,9 @@ import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp
 export default function TopNav() {
     return (
         <div className="top py-3 border-b border-white text-xs font-normal">
-            <div className="container flex justify-between items-center">
-                <div className="contact flex gap-3">
-                    <div className="phone flex items-center gap-1">
+            <div className="container flex md:justify-between justify-center items-center">
+                <div className="contact flex gap-3 md:flex-row flex-col items-center">
+                    <div className="phone flex items-center gap-1 ">
                         <div className="icon">
                             <FaPhoneAlt></FaPhoneAlt>
                         </div>
@@ -19,7 +19,7 @@ export default function TopNav() {
                         <span>contato@hanoveradv.com</span>
                     </div>
                 </div>
-                <div className="socials flex gap-4 text-lg">
+                <div className="socials md:flex gap-4 text-lg hidden">
                     <a className='transition hover:text-gold-300' href="">
                         <FaInstagram></FaInstagram>
                     </a>
