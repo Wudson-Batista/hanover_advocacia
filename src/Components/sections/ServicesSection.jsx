@@ -70,7 +70,7 @@ function ServicesSection() {
                     subtitle='Nossos serviços'
                     title='Escritório de advocacia'
                 />
-                <div className="cards mt-12 grid grid-cols-4 gap-6">
+                <div className="cards mt-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2   gap-6">
                     {cards.map(({ title, description, icon, id }) => (
                         <ServiceCard
                             title={title}
