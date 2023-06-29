@@ -9,7 +9,6 @@ export default {
   theme: {
     colors: {
       ...colors,
-      'white': '#E6ECF2',
       'black': '#1E1E1E',
     },
     fontFamily: {
@@ -45,6 +44,7 @@ export default {
           900: '#0A3866',
         },
         'blue-grey': {
+          100: '#E6ECF2',
           200: '#CED3D9',
           300: '#B6BABF',
           400: '#9DA2A6',

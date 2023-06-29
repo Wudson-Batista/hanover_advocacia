@@ -3,7 +3,7 @@ import React from 'react'
 function ServiceCard({ title, description, icon, id }) {
     return (
         <div
-            className='border border-blueGray-600 rounded p-8 text-center hover:cursor-pointer transition shadow hover:shadow-xl hover:shadow-gold-400/25 hover:-translate-y-2'
+            className='border border-blueGray-600 bg-white rounded p-8 text-center hover:cursor-pointer transition shadow hover:shadow-xl hover:shadow-gold-400/25 hover:-translate-y-2'
         >
             <img className='m-auto' src={icon} alt={title} />
             <div className="text mt-4">
