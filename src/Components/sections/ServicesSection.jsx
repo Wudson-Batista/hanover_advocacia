@@ -10,6 +10,9 @@ import hacker from '../../assets/icons/hacker.png'
 import shop from '../../assets/icons/shop.png'
 import home from '../../assets/icons/home.png'
 import ServiceCard from '../ServiceCard'
+import Button from '../Button'
+
+import { FaChevronRight } from 'react-icons/fa'
 
 function ServicesSection() {
     const cards = [
@@ -79,6 +82,9 @@ function ServicesSection() {
                             id={id}
                         />
                     ))}
+                </div>
+                <div className='flex md:justify-center mt-4'>
+                    <Button icon={<FaChevronRight className='text-lg' />}>Ver mais atuações</Button>
                 </div>
             </div>
         </section>
