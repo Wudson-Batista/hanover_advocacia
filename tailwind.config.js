@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 export default {
   content: [
     "./index.html",
@@ -7,20 +8,9 @@ export default {
   ],
   theme: {
     colors: {
-      'gold-200': '#FFE699',
-      'gold-300': '#E5C973',
-      'gold-400': '#CCAE52',
-      'gold-500': '#BF9E39',
-      'gold-600': '#A68521',
-      'gold-700': '#8C711C',
-      'blue-slate-500': '#6699CC',
-      'blue-slate-600': '#477DB2',
-      'blue-slate-700': '#2E6399',
-      'blue-slate-800': '#1A4C80',
-      'blue-slate-900': '#0A3866',
+      ...colors,
       'white': '#E6ECF2',
-      'black': '#1E1E1E'
-
+      'black': '#1E1E1E',
     },
     fontFamily: {
       'serif': ['"Libre Baskerville"', ...defaultTheme.fontFamily.sans],
@@ -37,7 +27,25 @@ export default {
         '2xl': '1496px',
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        gold: {
+          200: '#FFE699',
+          300: '#E5C973',
+          400: '#CCAE52',
+          500: '#BF9E39',
+          600: '#A68521',
+          700: '#8C711C',
+        },
+        'blue-slate': {
+          500: '#6699CC',
+          600: '#477DB2',
+          700: '#2E6399',
+          800: '#1A4C80',
+          900: '#0A3866',
+        }
+      },
+    },
   },
   plugins: [],
 }
