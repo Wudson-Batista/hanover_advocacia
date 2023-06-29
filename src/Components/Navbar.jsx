@@ -32,7 +32,7 @@ function Navbar() {
           <div className="nav-header mt-2 mb-6">
             <div className="close-btn flex justify-end">
               <FaTimes
-                className='text-red-400 cursor-pointer text-xl'
+                className='text-red-400 cursor-pointer text-2xl'
                 onClick={() => setIsMenuVisible(false)}
               />
             </div>
