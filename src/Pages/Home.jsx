@@ -15,7 +15,7 @@ function Home() {
                             subtitle={'Hanover Advocacia: Seu Parceiro Jurídico de Confiança'}
                             title={'Soluções jurídicas especializadas para empresas e indivíduos'}
                         />
-                        <Button bg='border-gold-400 border-2 text-gold-400 hover:bg-gold-400 hover:text-white mt-3'>Entre em contato</Button>
+                        <Button>Entre em contato</Button>
                     </div>
                 </div>
             </Banner>
