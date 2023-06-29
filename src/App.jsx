@@ -4,7 +4,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='text-black'>
+    <div className='text-blueGray-800'>
       <Outlet />
     </div>
   )
