@@ -84,7 +84,7 @@ function ServicesSection() {
                     ))}
                 </div>
                 <div className='flex md:justify-center mt-4'>
-                    <Button icon={<FaChevronRight className='text-lg' />}>Ver mais atuações</Button>
+                    <Button variant='outline' icon={<FaChevronRight className='text-lg' />}>Ver mais atuações</Button>
                 </div>
             </div>
         </section>
