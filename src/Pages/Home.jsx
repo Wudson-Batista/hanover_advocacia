@@ -4,6 +4,7 @@ import banner from '../assets/banner-bg.png'
 import Button from '../Components/Button'
 import Title from '../Components/Title'
 import ServicesSection from '../Components/sections/ServicesSection'
+import AboutSection from '../Components/sections/AboutSection'
 
 function Home() {
     return (
@@ -15,11 +16,12 @@ function Home() {
                             subtitle={'Hanover Advocacia: Seu Parceiro Jurídico de Confiança'}
                             title={'Soluções jurídicas especializadas para empresas e indivíduos'}
                         />
-                        <Button>Entre em contato</Button>
+                        <Button variant='outline' >Entre em contato</Button>
                     </div>
                 </div>
             </Banner>
             <ServicesSection></ServicesSection>
+            <AboutSection></AboutSection>
         </main>
     )
 }
