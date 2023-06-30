@@ -5,6 +5,7 @@ import Button from '../Components/Button'
 import Title from '../Components/Title'
 import ServicesSection from '../Components/sections/ServicesSection'
 import AboutSection from '../Components/sections/AboutSection'
+import ContactSection from '../Components/sections/ContactSection'
 
 function Home() {
     return (
@@ -22,6 +23,7 @@ function Home() {
             </Banner>
             <ServicesSection></ServicesSection>
             <AboutSection></AboutSection>
+            <ContactSection></ContactSection>
         </main>
     )
 }
