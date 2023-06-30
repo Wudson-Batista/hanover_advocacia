@@ -9,3 +9,10 @@
 .active {
     color: #E5C973;
 }
+
+.about-bg {
+    background-image: url(./assets/about-banner.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
