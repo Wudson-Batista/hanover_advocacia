@@ -1,14 +1,14 @@
 import React from 'react'
 import Form from '../Form'
-import Title from '../Title'
+import Map from '../Map'
 
 function ContactSection() {
     return (
-        <section className='my-16 bg-about'>
+        <section className='mb-16 bg-about'>
             <div className='container grid grid-cols-2 gap-5'>
                 <Form></Form>
-                
             </div>
+            <Map></Map>
 
         </section>
     )
