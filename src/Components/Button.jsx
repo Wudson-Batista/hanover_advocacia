@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Button({ children, icon, variant }) {
+function Button({ children, icon, variant, type }) {
 
     const outlineGoldButton = `rounded transition border-gold-400 border-2 text-gold-400 hover:bg-gold-400 hover:text-white mt-3 px-5 py-3 uppercase font-semibold tracking-wide`;
 
@@ -8,13 +8,13 @@ function Button({ children, icon, variant }) {
 
     return (
         icon ? (
-            <button className={` ${variant === 'outline' ? outlineGoldButton : solidGoldButton} flex gap-2 text-center items-center select-none`}>
+            <button type={type === 'submit' ? 'submit' : 'button'} className={` ${variant === 'outline' ? outlineGoldButton : solidGoldButton} flex gap-2 text-center items-center select-none`}>
                 <span>{children}</span>
                 {icon}
             </button>
         )
             : (
-                <button className={`${variant === 'outline' ? outlineGoldButton : solidGoldButton} select-none`}>
+                <button type={type === 'submit' ? 'submit' : 'button'} className={`${variant === 'outline' ? outlineGoldButton : solidGoldButton} select-none`}>
                     {children}
                 </button>
             )
