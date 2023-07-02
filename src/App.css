@@ -16,3 +16,12 @@
     background-position: center;
     width: 100%;
 }
+
+
+@media (width <=1024px) {
+    .contact-info {
+        box-shadow: 0 0 0 100vmax #E6ECF2;
+        clip-path: inset(0 -100vmax);
+        background-color: #E6ECF2;
+    }
+}

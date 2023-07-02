@@ -4,7 +4,7 @@ import Title from './Title'
 
 function Form() {
     return (
-        <form action="" className='py-20'>
+        <form action="" className='py-20 max-lg:container lg:pl-20 lg:pe-10'>
             <Title inverted={true} subtitle='Vamos conversar?' title='Entre em contato com o nosso escritório e descubra como nossos advogados podem te ajudar'></Title>
             <div className='mt-8 flex flex-col gap-4'>
                 <FormInput label='Nome' isRequired={true} inputType='text'></FormInput>
