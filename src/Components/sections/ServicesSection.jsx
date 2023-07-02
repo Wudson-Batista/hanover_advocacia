@@ -80,6 +80,7 @@ function ServicesSection() {
                             description={description}
                             icon={icon}
                             id={id}
+                            key={id}
                         />
                     ))}
                 </div>
