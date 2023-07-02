@@ -8,13 +8,13 @@ function Button({ children, icon, variant }) {
 
     return (
         icon ? (
-            <button className={` ${variant === 'outline' ? outlineGoldButton : solidGoldButton} flex gap-2 text-center items-center`}>
+            <button className={` ${variant === 'outline' ? outlineGoldButton : solidGoldButton} flex gap-2 text-center items-center select-none`}>
                 <span>{children}</span>
                 {icon}
             </button>
         )
             : (
-                <button className={variant === 'outline' ? outlineGoldButton : solidGoldButton}>
+                <button className={`${variant === 'outline' ? outlineGoldButton : solidGoldButton} select-none`}>
                     {children}
                 </button>
             )
