@@ -1,6 +1,8 @@
 import React from 'react'
 import FormInput from './FormInput'
 import Title from './Title'
+import Button from './Button'
+import { FaPaperPlane } from 'react-icons/fa'
 
 function Form() {
     return (
@@ -11,6 +13,11 @@ function Form() {
                 <FormInput label='E-mail' isRequired={true} inputType='email'></FormInput>
                 <FormInput label='Telefone' inputType='text'></FormInput>
                 <FormInput label='Mensagem' isRequired={true} inputType='textarea'></FormInput>
+            </div>
+            <div className='mt-6'>
+                <Button icon={<FaPaperPlane />} type='submit'>
+                    Enviar
+                </Button>
             </div>
         </form>
     )
