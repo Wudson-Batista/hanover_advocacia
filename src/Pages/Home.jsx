@@ -6,6 +6,7 @@ import Title from '../Components/Title'
 import ServicesSection from '../Components/sections/ServicesSection'
 import AboutSection from '../Components/sections/AboutSection'
 import ContactSection from '../Components/sections/ContactSection'
+import Footer from '../Components/sections/Footer'
 
 function Home() {
     return (
@@ -24,6 +25,7 @@ function Home() {
             <ServicesSection></ServicesSection>
             <AboutSection></AboutSection>
             <ContactSection></ContactSection>
+            <Footer></Footer>
         </main>
     )
 }
