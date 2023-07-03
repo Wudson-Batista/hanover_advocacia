@@ -13,7 +13,8 @@ function Navbar() {
       <div className="container flex justify-between items-center">
         <div className="logo lg:w-auto sm:w-56 w-48">
           <Link>
-            <img className='' src={logo} alt="Hanover Advocacia Logotipo" /></Link>
+            <img className='' src={logo} alt="Hanover Advocacia Logotipo" />
+          </Link>
         </div>
         <nav className="nav desktop md:block hidden">
           <ul className='flex items-center gap-5'>

@@ -3,9 +3,9 @@ import Socials from './Socials'
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 
-export default function TopNav({ iconSize }) {
+export default function TopNav() {
     return (
-        <div className={`top py-3 border-b border-white font-normal ${iconSize}`}>
+        <div className="top py-3 border-b border-white text-xs font-normal">
             <div className="container flex md:justify-between justify-center items-center">
                 <div className="contact flex gap-3 md:flex-row flex-col items-center">
                     <div className="phone flex items-center gap-1 ">
@@ -21,7 +21,7 @@ export default function TopNav({ iconSize }) {
                         <span>contato@hanoveradv.com</span>
                     </div>
                 </div>
-                <Socials iconSize='text-xs' />
+                <Socials size='text-lg'></Socials>
             </div>
 
         </div>

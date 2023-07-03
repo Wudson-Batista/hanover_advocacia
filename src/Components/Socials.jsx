@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
-function Socials() {
+function Socials({ size }) {
     return (
-        <div className="socials md:flex gap-4 text-lg hidden">
+        <div className={`socials md:flex gap-4 hidden ${size}`}>
             <a className='transition hover:text-gold-300' href="">
                 <FaInstagram></FaInstagram>
             </a>
