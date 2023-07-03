@@ -21,7 +21,7 @@ export default function TopNav() {
                         <span>contato@hanoveradv.com</span>
                     </div>
                 </div>
-                <Socials size='text-lg'></Socials>
+                <Socials size='text-lg' header={true}></Socials>
             </div>
 
         </div>
