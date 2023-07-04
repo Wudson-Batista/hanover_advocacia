@@ -34,7 +34,7 @@ function Navbar({ offset }) {
         <nav className="nav desktop md:block hidden">
           <ul className='flex items-center gap-5'>
             <li>
-              <NavLink exact='true' to={{ pathname: '/', hash: '#home' }} className={`${linkStyle}`}>Home</NavLink>
+              <NavLink to={{ pathname: '/', hash: '#home' }} className={`${linkStyle}`}>Home</NavLink>
             </li>
             <li
               className='relative group'
@@ -86,7 +86,7 @@ function Navbar({ offset }) {
           </ul>
         </nav>
 
-        <nav className={`nav mobile md:hidden block fixed pt-10 top-0 bg-black p-4 transition-[right] duration-300 h-screen z-10 w-48
+        <nav className={`nav mobile md:hidden block fixed h-screen pt-10 top-0 bg-black p-4 transition-[right] duration-300 z-10 w-56
               ${isMenuVisible ? 'right-0' : '-right-60'}`}>
           <div className="nav-header mt-2 mb-6">
             <div className="close-btn flex justify-end">
@@ -98,31 +98,57 @@ function Navbar({ offset }) {
           </div>
           <ul className={`flex flex-col gap-2 items-center`}>
             <li className='w-full text-left'>
-              <NavLink to='/' className={`${linkStyle} inline-block w-full`}>Home</NavLink>
+              <NavLink to={{ pathname: '/', hash: '#home' }} className={`${linkStyle} inline-block w-full`}>Home</NavLink>
             </li>
-            <li className='w-full text-left relative'>
-              <NavLink
-                to='/atuações'
-                className={`${linkStyle} w-full flex gap-2 items-center `}
+            <li
+              className='w-full text-left relative'
+              onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+              id='accordion-trigger'
+            >
+              <div
+                className={`${linkStyle} w-full flex gap-2 items-center cursor-pointer`}
               >
                 <span>Atuações</span>
-                <FaChevronDown></FaChevronDown>
-              </NavLink>
-            </li>
-            <li className='w-full text-left'>
-              <div
-                className={`${linkStyle}`}
+                <FaChevronDown className={`transition duration-300 ${isDropdownVisible ? '-rotate-180' : ''}`}></FaChevronDown>
+              </div>
 
+              <div
+                className={`accordion-content z-10 bg-white text-black divide-gray-100 ease-in-out transition-[grid-template-rows] duration-500 rounded-lg shadow w-auto grid overflow-hidden ${isDropdownVisible ? 'grid-rows-1' : 'grid-rows-[0]'}`}
+                aria-hidden={!isDropdownVisible}
+                aria-labelledby='accordion-trigger'
+              >
+                <ul className="py-2 text-sm text-blue-grey-700" aria-labelledby="dropdownHoverButton">
+                  <li>
+                    <NavLink to='/atuações' className="block px-4 py-2 bg-white hover:bg-blue-grey-200/70">Todas</NavLink>
+                  </li>
+                  {
+                    cards.map(actuation => (
+                      <li key={actuation.id} >
+                        <NavLink className="block px-4 py-2 bg-white hover:bg-blue-grey-200/70">{actuation.title}</NavLink>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </li>
+
+            <li className='w-full text-left'>
+              <Link
+                to={{ pathname: '/', hash: '#about' }}
+                className={`${linkStyle} inline-block w-full`}
+                preventScrollReset={false}
               >
                 Sobre Nós
-              </div>
+              </Link>
             </li>
             <li className='w-full text-left'>
-              <div
-                className={`${linkStyle}`}
+              <Link
+                to={{ pathname: '/', hash: '#contact' }}
+                className={`${linkStyle} inline-block w-full`}
+                preventScrollReset={false}
               >
                 Fale Conosco
-              </div>
+              </Link>
             </li>
           </ul>
         </nav>
