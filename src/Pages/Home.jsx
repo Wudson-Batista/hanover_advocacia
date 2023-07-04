@@ -25,7 +25,6 @@ function Home() {
             <ServicesSection></ServicesSection>
             <AboutSection></AboutSection>
             <ContactSection></ContactSection>
-            <Footer></Footer>
         </main>
     )
 }
