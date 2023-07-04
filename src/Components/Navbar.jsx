@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo/logo-v1.svg'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
+import { cards } from './sections/ServicesSection'
+import Actuations from '../Pages/Actuations'
 
 function Navbar() {
   const linkStyle = `p-2 transition hover:text-gold-300 font-medium`
 
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   return (
     <div className="navbar my-2">
@@ -19,10 +22,34 @@ function Navbar() {
         <nav className="nav desktop md:block hidden">
           <ul className='flex items-center gap-5'>
             <li><NavLink to='/' className={`${linkStyle}`}>Home</NavLink></li>
-            <li><NavLink to='/atuações' className={`${linkStyle} group flex gap-2 items-center`}>
-              <span>Atuações</span>
-              <FaChevronDown className='transition-transform duration-300 group-hover:-rotate-180'></FaChevronDown>
-            </NavLink></li>
+            <li className='relative group' onMouseEnter={() => setIsDropdownVisible(true)}
+              onMouseLeave={() => setIsDropdownVisible(false)}>
+              <NavLink
+                to='/atuações'
+                className={`${linkStyle} flex gap-2 items-center`}>
+
+
+                <span>Atuações</span>
+                <FaChevronDown className='transition-transform duration-300 group-hover:-rotate-180'></FaChevronDown>
+              </NavLink>
+              <div
+                id="dropdownHover"
+                className={`z-10 bg-white text-black absolute top-full divide-y divide-gray-100 rounded-lg shadow w-52 first-letter
+                  ${isDropdownVisible ? 'visible opacity-100' : 'invisible opacity-0'}
+                `}
+              >
+                <ul className="py-2 text-sm text-blue-grey-700" aria-labelledby="dropdownHoverButton">
+                  {
+                    cards.map(actuation => (
+                      <li key={actuation.id} >
+                        <Link className="block px-4 py-2 bg-white hover:bg-blue-grey-200/70">{actuation.title}</Link>
+                      </li>
+                    ))
+                  }
+                </ul>
+
+              </div>
+            </li>
             <li><div className={`${linkStyle}`}>Sobre Nós</div></li>
             <li><div className={`${linkStyle}`}>Fale Conosco</div></li>
           </ul>
@@ -42,8 +69,11 @@ function Navbar() {
             <li className='w-full text-left'>
               <NavLink to='/' className={`${linkStyle} inline-block w-full`}>Home</NavLink>
             </li>
-            <li className='w-full text-left'>
-              <NavLink to='/atuações' className={`${linkStyle} w-full flex gap-2 items-center `}>
+            <li className='w-full text-left relative'>
+              <NavLink
+                to='/atuações'
+                className={`${linkStyle} w-full flex gap-2 items-center `}
+              >
                 <span>Atuações</span>
                 <FaChevronDown></FaChevronDown>
               </NavLink>

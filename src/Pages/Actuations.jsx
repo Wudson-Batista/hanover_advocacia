@@ -38,7 +38,10 @@ function Actuations() {
                     </div>
                 </div>
             </div>
+
         </div>
+
+
 
     )
 }

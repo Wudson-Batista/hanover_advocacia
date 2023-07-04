@@ -8,7 +8,7 @@ function Footer() {
 
     const actuations = [
         'Direito de Família',
-        ' Direito Empresarial',
+        'Direito Empresarial',
         'Direito Criminal',
         'Direito Imobiliário',
         'Direito Cibernético',
