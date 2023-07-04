@@ -1,34 +1,48 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/logo/logo-v1.svg'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import cards from '../services/cards'
-import { HashLink } from 'react-router-hash-link'
 
-function Navbar() {
+function Navbar({ offset }) {
   const linkStyle = `p-2 transition hover:text-gold-300 font-medium`
+
+  const location = useLocation()
 
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
+  useEffect(() => {
+    const hash = location.hash
+    // Check if there is a hash and if an element with that id exists
+    const el = hash && document.getElementById(hash.substr(1))
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }, [location.hash])
+
   return (
     <div className={`navbar w-full`}>
       <div className={`container my-2 flex justify-between items-center w-full`}>
-        <div className="logo lg:w-auto sm:w-56 w-48">
-          <Link>
+        <div className={`logo ${offset > 50 ? 'lg:w-auto sm:w-48 w-36' : 'lg:w-auto sm:w-56 w-48'}`}>
+          <Link
+            to={{ pathname: '/', hash: '#home' }}
+          >
             <img className='' src={logo} alt="Hanover Advocacia Logotipo" />
           </Link>
         </div>
         <nav className="nav desktop md:block hidden">
           <ul className='flex items-center gap-5'>
-            <li><NavLink to='/' className={`${linkStyle}`}>Home</NavLink></li>
+            <li>
+              <NavLink exact='true' to={{ pathname: '/', hash: '#home' }} className={`${linkStyle}`}>Home</NavLink>
+            </li>
             <li
               className='relative group'
               onMouseEnter={() => setIsDropdownVisible(true)}
               onMouseLeave={() => setIsDropdownVisible(false)}
             >
               <NavLink
-                to='/atuações'
+                to={'/atuações'}
                 className={`${linkStyle} flex gap-2 items-center`}>
                 <span>Atuações</span>
                 <FaChevronDown className='transition-transform duration-300 group-hover:-rotate-180'></FaChevronDown>
@@ -43,7 +57,7 @@ function Navbar() {
                   {
                     cards.map(actuation => (
                       <li key={actuation.id} >
-                        <Link className="block px-4 py-2 bg-white hover:bg-blue-grey-200/70">{actuation.title}</Link>
+                        <NavLink className="block px-4 py-2 bg-white hover:bg-blue-grey-200/70">{actuation.title}</NavLink>
                       </li>
                     ))
                   }
@@ -52,21 +66,22 @@ function Navbar() {
               </div>
             </li>
             <li>
-              <HashLink
+              <Link
+                to={{ pathname: '/', hash: '#about' }}
                 className={`${linkStyle}`}
-                smooth to="/#about"
-
+                preventScrollReset={false}
               >
                 Sobre Nós
-              </HashLink>
+              </Link>
             </li>
             <li>
-              <HashLink
+              <Link
+                preventScrollReset={false}
+                to={{ pathname: '/', hash: '#contact' }}
                 className={`${linkStyle}`}
-                smooth to="/#contact"
               >
                 Fale Conosco
-              </HashLink>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -95,20 +110,19 @@ function Navbar() {
               </NavLink>
             </li>
             <li className='w-full text-left'>
-              <HashLink
+              <div
                 className={`${linkStyle}`}
-                smooth to="/#about"
+
               >
                 Sobre Nós
-              </HashLink>
+              </div>
             </li>
             <li className='w-full text-left'>
-              <HashLink
+              <div
                 className={`${linkStyle}`}
-                smooth to="/#contact"
               >
                 Fale Conosco
-              </HashLink>
+              </div>
             </li>
           </ul>
         </nav>

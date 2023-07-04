@@ -10,9 +10,9 @@ import Footer from '../Components/sections/Footer'
 
 function Home() {
     return (
-        <main className=''>
+        <main className='' id='home'>
             <Banner bg={banner} overlay={true}>
-                <div className="container flex h-[calc(70vh)] items-center">
+                <div className="container flex h-screen items-center">
                     <div className='md:max-w-2xl '>
                         <Title
                             subtitle={'Hanover Advocacia: Seu Parceiro Jurídico de Confiança'}

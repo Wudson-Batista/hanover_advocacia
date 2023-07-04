@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Banner from '../Components/Banner'
 import actuactionsBg from '../assets/actuations-bg.jpg'
 import Title from '../Components/Title'
@@ -7,9 +7,14 @@ import ServiceCard from '../Components/ServiceCard'
 import { cards } from '../Components/sections/ServicesSection'
 
 function Actuations() {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     return (
         <div>
-            <Banner bg={actuactionsBg} overlay={true}>
+            <Banner id='actuations-banner' bg={actuactionsBg} overlay={true}>
                 <div className="container flex h-[calc(70vh)] items-center">
                     <div className='md:max-w-2xl '>
                         <Title
