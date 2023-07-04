@@ -12,8 +12,8 @@ function Home() {
     return (
         <main className='' id='home'>
             <Banner bg={banner} overlay={true}>
-                <div className="container flex h-screen items-center">
-                    <div className='md:max-w-2xl '>
+                <div className="container flex items-center h-screen">
+                    <div className='md:max-w-2xl mt-20'>
                         <Title
                             subtitle={'Hanover Advocacia: Seu Parceiro Jurídico de Confiança'}
                             title={'Soluções jurídicas especializadas para empresas e indivíduos'}
