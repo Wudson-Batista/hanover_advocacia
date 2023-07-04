@@ -3,22 +3,9 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo/logo-v1.svg'
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import Socials from '../Socials'
+import cards from '../../services/cards'
 
 function Footer() {
-
-    const actuations = [
-        'Direito de Família',
-        'Direito Empresarial',
-        'Direito Criminal',
-        'Direito Imobiliário',
-        'Direito Cibernético',
-        'Direito do Consumidor',
-        'Direito Trabalhista',
-        'Direito Tributário',
-        'Direito Previdenciário',
-        'Direito Administrativo'
-    ]
-
 
     return (
         <footer className='bg-footer pt-9'>
@@ -55,9 +42,9 @@ function Footer() {
                     <div className="links max-md:text-sm lg:max-w-[70%]">
                         <ul className='grid grid-rows-3 sm:grid-cols-2 max-sm:gap-2 gap-1 grid-cols-1 mt-4'>
                             {
-                                actuations.map((actuation, index) => (
+                                cards.map((actuation, index) => (
                                     <li>
-                                        <Link className='text-white transition  hover:text-gold-300 '>- {actuation}</Link>
+                                        <Link className='text-white transition  hover:text-gold-300 '>- {actuation.title}</Link>
                                     </li>
                                 ))
                             }

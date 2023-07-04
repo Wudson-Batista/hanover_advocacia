@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo/logo-v1.svg'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
-import { cards } from './sections/ServicesSection'
+import cards from '../services/cards'
 import Actuations from '../Pages/Actuations'
 
 function Navbar() {
