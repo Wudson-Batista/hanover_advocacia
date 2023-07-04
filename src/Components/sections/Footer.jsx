@@ -43,7 +43,7 @@ function Footer() {
                         <ul className='grid grid-rows-3 sm:grid-cols-2 max-sm:gap-2 gap-1 grid-cols-1 mt-4'>
                             {
                                 cards.map((actuation, index) => (
-                                    <li>
+                                    <li key={actuation.id}>
                                         <Link className='text-white transition  hover:text-gold-300 '>- {actuation.title}</Link>
                                     </li>
                                 ))

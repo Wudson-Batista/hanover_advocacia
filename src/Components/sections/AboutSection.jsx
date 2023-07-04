@@ -5,7 +5,7 @@ import { FaChevronRight } from 'react-icons/fa'
 
 function AboutSection() {
     return (
-        <section className='py-16 about-bg' >
+        <section id='about' className='py-16 about-bg' >
             <div className="container">
                 <div className="frame md:p-14 sm:p-10 p-8 bg-about text-white max-w-[500px]">
                     <Title title='quem somos' subtitle='nossa historia' />

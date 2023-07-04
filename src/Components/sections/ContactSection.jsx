@@ -6,7 +6,7 @@ import ContactInfo from '../ContactInfo'
 
 function ContactSection() {
     return (
-        <section className='bg-about'>
+        <section id='contact' className='bg-about'>
             <div className='grid lg:grid-cols-2'>
                 <Form></Form>
                 <div className='contact-info bg-blue-grey-50 max-lg:container lg:pe-20 py-20 lg:pl-10'>
