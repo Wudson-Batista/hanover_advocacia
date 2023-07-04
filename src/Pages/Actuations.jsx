@@ -15,8 +15,8 @@ function Actuations() {
     return (
         <div>
             <Banner id='actuations-banner' bg={actuactionsBg} overlay={true}>
-                <div className="container flex h-[calc(70vh)] items-center">
-                    <div className='md:max-w-2xl '>
+                <div className="container flex items-center h-screen">
+                    <div className='md:max-w-2xl mt-24'>
                         <Title
                             subtitle={'ÁREAS DE ATUAÇÃO'}
                             title={'Conheça as áreas de atuação de nossos advogados.'}
