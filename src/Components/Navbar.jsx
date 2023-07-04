@@ -24,7 +24,7 @@ function Navbar({ offset }) {
   return (
     <div className={`navbar w-full`}>
       <div className={`container my-2 flex justify-between items-center w-full`}>
-        <div className={`logo ${offset > 50 ? 'lg:w-auto sm:w-48 w-36' : 'lg:w-auto sm:w-56 w-48'}`}>
+        <div className={`logo ${offset > 50 ? 'sm:w-52 w-40' : 'lg:w-auto sm:w-56 w-48'}`}>
           <Link
             to={{ pathname: '/', hash: '#home' }}
           >

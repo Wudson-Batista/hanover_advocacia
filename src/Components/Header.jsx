@@ -17,7 +17,7 @@ function Header() {
     }, []);
 
     return (
-        <header className={`fixed w-full transition z-99 duration - 300 ease ${offset > 50 ? 'bg-red-500 fixed top-0 z-50 ' : ''} ' : ''}`}>
+        <header className={`fixed w-full transition-all z-99 duration-500 ease ${offset > 50 ? 'bg-about fixed top-0 z-50 ' : ''} ' : ''}`}>
             <div>
                 <TopNav offset={offset}></TopNav>
                 <Navbar offset={offset}></Navbar>
