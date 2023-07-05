@@ -27,7 +27,6 @@ function Navbar({ offset }) {
         <div className={`logo ${offset > 50 ? 'sm:w-52 w-40' : 'lg:w-auto sm:w-56 w-48'}`}>
           <Link
             to={{ pathname: '/', hash: '#home' }}
-            end
           >
             <img className='' src={logo} alt="Hanover Advocacia Logotipo" />
           </Link>
@@ -35,7 +34,7 @@ function Navbar({ offset }) {
         <nav className="nav desktop md:block hidden">
           <ul className='flex items-center gap-5'>
             <li>
-              <NavLink to={{ pathname: '/', hash: '#home' }} className={`${linkStyle}`}>Home</NavLink>
+              <NavLink to={{ pathname: '/', hash: '#home' }} end='true' className={`${linkStyle}`}>Home</NavLink>
             </li>
             <li
               className='relative group'
@@ -45,7 +44,7 @@ function Navbar({ offset }) {
               <NavLink
                 to={'/atuações'}
                 className={`${linkStyle} flex gap-2 items-center`}
-                end
+                end='true'
               >
                 <span>Atuações</span>
                 <FaChevronDown className='transition-transform duration-300 group-hover:-rotate-180'></FaChevronDown>
@@ -124,7 +123,7 @@ function Navbar({ offset }) {
                   <li>
                     <NavLink
                       to='/atuações'
-                      end
+                      end='true'
                       className={`block px-4 py-2 bg-white hover:bg-blue-grey-200/70`}>Todas</NavLink>
                   </li>
                   {
@@ -147,7 +146,6 @@ function Navbar({ offset }) {
               <Link
                 to={{ pathname: '/', hash: '#about' }}
                 className={`${linkStyle} inline-block w-full`}
-                preventScrollReset={false}
               >
                 Sobre Nós
               </Link>
@@ -156,7 +154,6 @@ function Navbar({ offset }) {
               <Link
                 to={{ pathname: '/', hash: '#contact' }}
                 className={`${linkStyle} inline-block w-full`}
-                preventScrollReset={false}
               >
                 Fale Conosco
               </Link>
