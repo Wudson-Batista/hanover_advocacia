@@ -15,7 +15,9 @@ function Banner({ children, bg, overlay }) {
             }}
         >
             <Header />
-            {children}
+            <div className='container flex items-center h-screen'>
+                {children}
+            </div>
         </div >
     )
 }
