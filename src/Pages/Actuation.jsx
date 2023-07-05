@@ -40,7 +40,7 @@ function Actuation() {
                                         </div>
                                         <div className="lg:w-2/5 square bg-card p-6 text-white rounded text-center flex-col flex items-center">
                                             <p>
-                                                Precisa de ajuda jurídica em Direito empresarial? <span className='underline'>Hanover advocacia</span> pode ajudar você!
+                                                Precisa de ajuda jurídica em {actuation?.title}? <span className='underline'>Hanover advocacia</span> pode ajudar você!
                                             </p>
 
                                             <Button type='link' to={{ pathname: '/', hash: '#contact' }} variant='outline'>
@@ -63,17 +63,20 @@ function Actuation() {
                                     </ul>
                                 </section>
 
-                                <section className='py-14'>
-                                    <div className='grid lg:grid-cols-2 lg:gap-8 gap-6'>
-                                        {
-                                            actuation.whatis.map((item, id) => (
-                                                <div key={id}>
-                                                    {item.content}
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                </section>
+                                {actuation?.whatis || actuation?.whatis?.length < 1 ?
+                                    (<section className='py-14'>
+                                        <div className='grid lg:grid-cols-2 lg:gap-8 gap-6'>
+                                            {
+                                                actuation.whatis.map((item, id) => (
+                                                    <div key={id}>
+                                                        {item.content}
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    </section>)
+                                    : ''
+                                }
                             </div>
                         </div>
                     ))

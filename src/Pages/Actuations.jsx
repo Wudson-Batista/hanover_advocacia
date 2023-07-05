@@ -28,10 +28,11 @@ function Actuations() {
 
             <div className="actuations-card my-20">
                 <div className="container">
-                    <div className='grid lg:grid-cols-3 sm:grid-cols-2 gap-8'>
+                    <div className='grid lg:grid-cols-3 sm:grid-cols-2 gap-8 auto-rows-[300px] '>
                         {
                             cards.map(({ title, description, icon, id }) => (
                                 <ServiceCard
+                                    to={`/atuações/${title.toLocaleLowerCase().split(' ').join('-')}`}
                                     title={title}
                                     description={description}
                                     icon={icon}
@@ -44,7 +45,7 @@ function Actuations() {
                 </div>
             </div>
 
-        </div>
+        </div >
 
 
 

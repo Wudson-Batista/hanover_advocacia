@@ -44,7 +44,7 @@ function Footer() {
                             {
                                 cards.map((actuation, index) => (
                                     <li key={actuation.id}>
-                                        <Link className='text-white transition  hover:text-gold-300 '>- {actuation.title}</Link>
+                                        <Link to={`/atuações/${actuation.title.toLocaleLowerCase().split(' ').join('-')}`} className='text-white transition  hover:text-gold-300 '>- {actuation.title}</Link>
                                     </li>
                                 ))
                             }
@@ -67,7 +67,7 @@ function Footer() {
             <div className='credits bg-blue-grey-700/90 py-3 text text-blue-grey-200/80 text-center text-xs'>
                 Desenvolvido por <a href='#' className='text-[#2E6399] hover:underline transition'>Web Cosmos</a>
             </div>
-        </footer>
+        </footer >
     )
 }
 

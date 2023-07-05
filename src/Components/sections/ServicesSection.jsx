@@ -22,6 +22,7 @@ function ServicesSection() {
                         cards.map(({ title, description, icon, id }, i) => (
                             i < 6 && (
                                 <ServiceCard
+                                    to={`/atuações/${title.toLocaleLowerCase().split(' ').join('-')}`}
                                     title={title}
                                     description={description}
                                     icon={icon}
@@ -35,7 +36,7 @@ function ServicesSection() {
                     }
                 </div>
                 <div className='flex md:justify-center mt-4'>
-                    <Button variant='outline' icon={<FaChevronRight className='text-lg' />}>Ver mais atuações</Button>
+                    <Button type='link' to='/atuações' variant='outline' icon={<FaChevronRight className='text-lg' />}>Ver mais atuações</Button>
                 </div>
             </div>
         </section>
