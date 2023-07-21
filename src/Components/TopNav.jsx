@@ -12,13 +12,13 @@ export default function TopNav({ offset }) {
                         <div className="icon">
                             <FaPhoneAlt></FaPhoneAlt>
                         </div>
-                        <span>+55 (21) 98882-0554</span>
+                        <span>+55 (99) 99999-9999</span>
                     </div>
                     <div className="phone flex items-center gap-1">
                         <div className="icon">
                             <FaEnvelope></FaEnvelope>
                         </div>
-                        <span>contato@hanoveradv.com</span>
+                        <span>exemple@email.com</span>
                     </div>
                 </div>
                 <Socials size='text-lg' header={true}></Socials>
