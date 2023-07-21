@@ -4,7 +4,7 @@
 
 ### Tecnologias
 
-| Syntax | Description |
+| Tecnologias | Versões |
 | ----------- | ----------- |
 | React | 18.2.0 |
 | react-router-dom | 4.10.1 |
