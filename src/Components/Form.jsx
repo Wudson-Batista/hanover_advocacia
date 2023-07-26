@@ -1,9 +1,9 @@
 import React from 'react'
-import FormInput from './FormInput'
 import Button from './Button'
 import { FaPaperPlane } from 'react-icons/fa'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Title } from '../Components/Title/Index'
+import { Input } from '../Components/Input/Index'
 
 function Form() {
 
@@ -30,11 +30,31 @@ function Form() {
                 </div>
                 <div className='mt-8 flex flex-col gap-4'>
                     {/* <FormInput label='Nome' isRequired={true} inputType='text'></FormInput> */}
-
-                    <FormInput label='Nome' field='name' isRequired={true} inputType='text'></FormInput>
-                    <FormInput label='E-mail' field='email' isRequired={true} inputType='email'></FormInput>
-                    <FormInput label='Telefone' field='phone' inputType='text'></FormInput>
-                    <FormInput label='Mensagem' field='mensage' isRequired={true} inputType='textarea'></FormInput>
+                    <Input.Wrapper>
+                        <Input.FormInput field="name" />
+                        <Input.Label htmlFor='floating_name'>
+                            Nome
+                        </Input.Label>
+                    </Input.Wrapper>
+                    <Input.Wrapper>
+                        <Input.FormInput field="email" />
+                        <Input.Label htmlFor='floating_email'>
+                            E-mail
+                        </Input.Label>
+                    </Input.Wrapper>
+                    <Input.Wrapper>
+                        <Input.FormInput field="phone" />
+                        <Input.Label htmlFor='floating_phone'>
+                            Telefone
+                        </Input.Label>
+                    </Input.Wrapper>
+                    {/* <FormInput label='Mensagem' field='mensage' isRequired={true} inputType='textarea'></FormInput> */}
+                    <Input.Wrapper>
+                        <Input.TextArea field='message' />
+                        <Input.Label htmlFor='floating_message' className='peer-placeholder-shown:top-1/4'>
+                            Mensagem
+                        </Input.Label>
+                    </Input.Wrapper>
                 </div>
                 <div className='mt-6'>
                     <Button icon={<FaPaperPlane />} type='submit'>
@@ -42,7 +62,7 @@ function Form() {
                     </Button>
                 </div>
             </form>
-        </FormProvider>
+        </FormProvider >
     )
 }
 
