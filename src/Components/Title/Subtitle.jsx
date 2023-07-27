@@ -1,10 +1,13 @@
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
-function Subtitle({ children }) {
+function Subtitle(restProps) {
     return (
-        <h3 className={`md:text-3xl uppercase text-xl subtitle font-medium font-serif text-gold-400 mb-1`}>
-            {children}
-        </h3>
+        <h3
+            {...restProps}
+            className={
+                twMerge(`md:text-3xl uppercase text-xl subtitle font-medium font-serif text-gold-400 mb-1`, restProps.className)
+            } />
     )
 }
 

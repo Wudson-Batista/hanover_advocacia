@@ -1,11 +1,11 @@
 import React from 'react'
-import Title from '../Title'
 
 import ServiceCard from '../ServiceCard'
 import Button from '../Button'
 
 import { FaChevronRight } from 'react-icons/fa'
 import cards from '../../services/cards'
+import { Title } from '../Title/Index'
 
 
 function ServicesSection() {
@@ -13,10 +13,15 @@ function ServicesSection() {
     return (
         <section className='my-24'>
             <div className="container">
-                <Title
-                    subtitle='Nossos serviços'
-                    title='Escritório de advocacia'
-                />
+                <div>
+                    <Title.Subtitle className='md:text-md sm:text-md text-sm'>
+                        Nossos serviços
+                    </Title.Subtitle>
+                    <Title.MainTitle className='text-blue-grey-700 md:text-3xl uppercase text-xl'>
+                        Escritório de advocacia
+                    </Title.MainTitle>
+                </div>
+
                 <div className="cards mt-12 grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
                     {
                         cards.map(({ title, description, icon, id }, i) => (

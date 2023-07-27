@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import Banner from '../Components/Banner'
 import actuactionsBg from '../assets/actuations-bg.jpg'
-import Title from '../Components/Title'
+// import Title from '../Components/Title'
+import { Title } from '../Components/Title/Index'
 import Button from '../Components/Button'
 import ServiceCard from '../Components/ServiceCard'
 import { cards } from '../Components/sections/ServicesSection'
@@ -17,10 +18,21 @@ function Actuations() {
             <Banner id='actuations-banner' bg={actuactionsBg} overlay={true}>
                 <div className="container flex items-center h-screen">
                     <div className='md:max-w-2xl mt-24'>
-                        <Title
+                        {/* <Title
                             subtitle={'ÁREAS DE ATUAÇÃO'}
                             title={'Conheça as áreas de atuação de nossos advogados.'}
-                        />
+                        /> */}
+
+                        <div>
+                            <Title.Subtitle className='md:text-md sm:text-md text-sm'>
+                                ÁREAS DE ATUAÇÃO
+                            </Title.Subtitle>
+                            <Title.MainTitle className=' md:text-3xl uppercase text-xl'>
+                               Conheça as áreas de atuação de nossos advogados.
+                            </Title.MainTitle>
+                        </div>
+
+
                         <Button variant='outline' >Entre em contato</Button>
                     </div>
                 </div>

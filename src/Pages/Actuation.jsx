@@ -4,7 +4,7 @@ import Banner from '../Components/Banner'
 import banner from '../assets/banner-bg-empresa.png'
 import cards from '../services/cards'
 
-import Title from '../Components/Title'
+import { Title } from '../Components/Title/Index'
 import Button from '../Components/Button'
 
 function Actuation() {
@@ -28,7 +28,15 @@ function Actuation() {
                         <div key={actuation?.id}>
                             <Banner overlay={true} bg={banner}>
                                 <div className='text-center w-full'>
-                                    <Title title={actuation?.title} subtitle='hanover advocacia - rj' />
+                                    <div>
+                                        <Title.Subtitle className='md:text-md sm:text-md text-sm'>
+                                            hanover advocacia
+                                        </Title.Subtitle>
+                                        <Title.MainTitle className=' md:text-3xl uppercase text-xl'>
+                                            Escritório de advocacia
+                                        </Title.MainTitle>
+                                    </div>
+
                                 </div>
                             </Banner>
                             <div className='container'>

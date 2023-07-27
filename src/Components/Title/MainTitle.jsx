@@ -1,10 +1,12 @@
 import React from 'react'
+import { twJoin, twMerge } from 'tailwind-merge'
 
-function MainTitle({ children }) {
+function MainTitle(restProps) {
     return (
-        <h1 className={`text-white md:text-md sm:text-md text-sm title font-semibold`}>
-            {children}
-        </h1>
+        <h1 {...restProps}
+            className={
+                twMerge('text-white md:text-md sm:text-md text-sm title font-semibold', restProps.className)}
+        />
     )
 }
 

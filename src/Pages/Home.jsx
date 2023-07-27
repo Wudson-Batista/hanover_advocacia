@@ -2,21 +2,26 @@ import React from 'react'
 import Banner from '../Components/Banner'
 import banner from '../assets/banner-bg.png'
 import Button from '../Components/Button'
-import Title from '../Components/Title'
 import { ServicesSection } from '../Components/sections/ServicesSection'
 import AboutSection from '../Components/sections/AboutSection'
 import ContactSection from '../Components/sections/ContactSection'
-import Footer from '../Components/sections/Footer'
+import { Title } from '../Components/Title/Index'
+
 
 function Home() {
     return (
         <main className='' id='home'>
             <Banner bg={banner} overlay={true}>
                 <div className='md:max-w-2xl mt-24'>
-                    <Title
-                        subtitle={'Hanover Advocacia: Seu Parceiro Jurídico de Confiança'}
-                        title={'Soluções jurídicas especializadas para empresas e indivíduos'}
-                    />
+                    <div>
+                        <Title.Subtitle>
+                            Hanover Advocacia: Seu Parceiro Jurídico de Confiança
+                        </Title.Subtitle>
+                        <Title.MainTitle>
+                            Soluções jurídicas especializadas para empresas e indivíduos
+                        </Title.MainTitle>
+                    </div>
+
                     <Button variant='outline' >Entre em contato</Button>
                 </div>
             </Banner>
